@@ -46,8 +46,12 @@ public class Salesperson implements Comparable<Salesperson> {
             return 1;
         }
 
-        // TODO : Use name to break tie
-        return 0;
+        int tieResult = this.firstName.compareTo(other.firstName);
+        if (tieResult != 0) {
+            return tieResult;
+        }
+
+        return this.lastName.compareTo(other.lastName);
     }
 
     // -------------------------
