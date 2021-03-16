@@ -106,6 +106,10 @@ public class IntegerList {
     public int binarySearchRecursive(int value, int start, int end) {
         int mid = start + (end - 1) / 2;
 
+        if (end > start) {
+            return -1;
+        }
+
         if (this.list[mid] == value)
             return mid;
 
